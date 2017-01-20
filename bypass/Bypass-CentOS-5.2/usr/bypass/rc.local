@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# This script will be executed *after* all the other init scripts.
+# You can put your own initialization stuff in here if you don't
+# want to do the full Sys V style init stuff.
+
+rmmod sbs
+rmmod i2c-ec
+rmmod i2c-i801
+rmmod i2c-core
+insmod /usr/bypass/i2c-core.ko
+insmod /usr/bypass/i2c-i801.ko
+insmod /usr/bypass/bypassdrv.ko
+mknod /dev/bypass c 243 0 
+
+./usr/bypass/ctl &

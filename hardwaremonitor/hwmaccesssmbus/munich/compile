@@ -1,0 +1,1 @@
+gcc -O3 -Wall -o hwmodiag_for_munich hwmodiag_for_munich.c

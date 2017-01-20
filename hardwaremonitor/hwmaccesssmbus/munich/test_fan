@@ -1,0 +1,19 @@
+#! /bin/bash
+bt=`date`
+while [ 1 = 1 ]
+do 
+/home/xuyuanjie/hwmodiag/0.6/hwmodiag_for_munich -i fan1 -L 500 -H 5000
+if [ $? -ne 0 ];then
+	et=`date`
+	echo "begin time: $bt"
+	echo "end time: $et"
+	exit
+fi
+/home/xuyuanjie/hwmodiag/0.6/hwmodiag_for_munich -i fan2 -L 2500 -H 7000
+if [ $? -ne 0 ];then
+	et=`date`
+	echo "begin time: $bt"
+	echo "end time: $et"
+	exit
+fi
+done

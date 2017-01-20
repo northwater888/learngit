@@ -1,0 +1,1 @@
+cmd_/mnt/gpioo/gpio34.ko.unsigned := ld -r -m elf_x86_64 -T /usr/src/kernels/2.6.32-131.0.15.el6.x86_64/scripts/module-common.lds --build-id -o /mnt/gpioo/gpio34.ko.unsigned /mnt/gpioo/gpio34.o /mnt/gpioo/gpio34.mod.o 

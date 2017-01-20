@@ -1,0 +1,19 @@
+!define BLANK ""
+E:\work\MiVTS_Source_Framework\diag_program\hardwareMonitor\stuttgart\hwmodi&
+ag_for_stuttgart.obj : E:\work\MiVTS_Source_Framework\diag_program\hardwareM&
+onitor\stuttgart\hwmodiag_for_stuttgart.c .AUTODEPEND
+ @E:
+ cd E:\work\MiVTS_Source_Framework\diag_program\hardwareMonitor\stuttgart
+ *wcc386 hwmodiag_for_stuttgart.c -i=d:\WATCOM\h -w4 -e25 -zq -od -d2 -6r -b&
+t=dos -mf
+
+E:\work\MiVTS_Source_Framework\diag_program\hardwareMonitor\stuttgart\noname&
+.exe : E:\work\MiVTS_Source_Framework\diag_program\hardwareMonitor\stuttgart&
+\hwmodiag_for_stuttgart.obj .AUTODEPEND
+ @E:
+ cd E:\work\MiVTS_Source_Framework\diag_program\hardwareMonitor\stuttgart
+ @%write noname.lk1 FIL hwmodiag_for_stuttgart.obj
+ @%append noname.lk1 
+ *wlink name noname d all SYS causeway op m op maxe=25 op q op symf @noname.&
+lk1
+
